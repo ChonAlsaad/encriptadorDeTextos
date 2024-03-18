@@ -22,6 +22,9 @@ body {
 main {
     padding: 0;
     margin: 0;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
 }
 
 button:hover {
@@ -39,8 +42,8 @@ p {
 
 .logoA {
     position: absolute;
-    top: 20px;
-    left: 3%;
+    top: 40px;
+    left: 4%;
     transform: translate(-50%);
 }
 
@@ -57,7 +60,7 @@ p {
 
 .seccionInput, .seccionResultados {
     border-radius: 32px;
-    height: 830px;
+    height: 810px;
     padding: 20px;
 
     
@@ -70,6 +73,7 @@ p {
 .seccionInput {
     background-color: none;
     width: 75vw;
+    /* width: auto; */
     margin: 0px 40px 0px 40px;
     padding: 40px;
     
@@ -123,6 +127,7 @@ p {
     margin-top: auto;
     display: flex;
     justify-content: space-between;
+    font-size: ;
 }
 
 .botones button {
@@ -138,6 +143,8 @@ p {
     color: var(--color-lightblue);
     border: solid 1px var(--color-lightblue);
     margin-right: 12px;
+    font-size: 20px;
+    font-weight: bold;
 } .botonEncriptar:hover {
     background-color: var(--color-darkblueHover);
 }
@@ -147,6 +154,8 @@ p {
     color: var(--color-darkblue);
     border: solid 1px var(--color-darkblue);
     margin-left: 12px;
+    font-size: 20px;
+    font-weight: bold;
 } .botonDesencriptar:hover {
     background-color: var(--color-lightblueHover);
 }
@@ -160,10 +169,10 @@ p {
 /* SECCION RESULTADOS */
 
 .seccionResultados {
-    /* width: 400px; */
-    width: 25vw;
+    width: 400px;
+    /* width: 25vw; */
     background-color: var(--color-resultados);
-    margin: 0px 10px 0px 10px;
+    margin: 40px 40px 0px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -201,4 +210,233 @@ p {
     margin-right: 12px;
 } .elBoton:hover {
     background-color: var(--color-darkblueHover);
+}
+
+
+
+
+    /* MEDIA QUERY */
+
+
+
+
+@media screen and (max-width: 1115px) and (min-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .seccionInput, .seccionResultados {
+        width: 80%;
+        margin: 20px; 
+    }
+    
+    .imagenTextos img {
+        display: none;
+    }
+    
+    .seccionResultados {
+        width: 100vw;
+        max-width: 688px;
+        height: auto;
+        /* max-height: 200px; */
+    }
+    
+    #textoNegrito {
+        font-weight: bold;
+        font-size: 24px;
+        color: black;
+    }
+    
+    .logoA {
+        top: 50px;
+        left: 10%;
+        /* transform: translateX(-50%); */
+    }
+
+    .TextosGrises {
+        top: 84%;
+        left: 2% !important;
+    }
+}
+    
+
+
+@media screen and (max-width: 767px) and (min-width: 375px) {
+    
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        flex-direction: column;
+        margin: 40px 0;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .seccionInput {
+        height: 600px;
+    }
+    
+    .seccionInput textarea  {
+        margin: 0;
+        padding: 10px;
+        height: auto;
+        max-height: 400px;
+    }
+
+
+    .TextosGrises {
+        top: 53%;
+        left: 4% !important;
+    }
+
+
+    .seccionInput, .seccionResultados {
+        width: 90%;
+        margin: 20px 0;
+
+        
+    }
+
+    .imagenTextos img {
+        display: none;
+    }
+
+    
+    #textoNegrito {
+        font-weight: bold;
+        font-size: 24px;
+        color: black;
+    }
+    
+    .logoA {
+        top: 50px;
+        left: 10%;
+    }
+
+    
+    
+    
+    .botones {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        width: auto;
+        height: auto;
+    }
+    
+    .botones button {
+        padding: 5px;
+        height: 67px;
+    }
+    
+    .botonEncriptar {
+        margin-right: 0;
+    }
+    
+    .botonDesencriptar {
+        margin-top: 2%;
+        margin-left: 0;
+    }
+    
+    .seccionResultados {
+        height: auto;
+        padding: 0;
+        margin: 1% 0 0 0;
+        
+    
+        margin: 20px 0; 
+    }
+    
+    
+}
+
+@media screen and (max-width: 374px) {
+
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        flex-direction: column;
+        margin: 40px 0;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .seccionInput {
+        height: 600px;
+    }
+    
+    .seccionInput textarea  {
+        margin: 0;
+        padding: 10px;
+        height: auto;
+        max-height: 400px;
+    }
+
+
+    .TextosGrises {
+        top: 53%;
+        left: 4% !important;
+        font-size: 12px;
+    }
+
+
+    .seccionInput, .seccionResultados {
+        width: 90%;
+        margin: 20px 0;        
+    }
+
+    .imagenTextos img {
+        display: none;
+    }
+
+    #textoNegrito {
+        font-weight: bold;
+        font-size: 18px;
+        color: black;
+    }
+    
+    .logoA {
+        top: 50px;
+        left: 10%;
+    }
+    
+    .botones {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        height: auto;
+    }
+    
+    .botones button {
+        padding: 5px;
+        height: 67px;
+    }
+    
+    .botonEncriptar {
+        margin-right: 0;
+    }
+    
+    .botonDesencriptar {
+        margin-top: 2%;
+        margin-left: 0;
+    }
+    
+    .seccionResultados {
+        height: auto;
+        padding: 0;
+        margin: 1% 0 0 0;
+        
+    
+        margin: 20px 0; 
+    }
 }
