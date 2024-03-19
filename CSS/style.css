@@ -36,7 +36,7 @@ p {
     text-align: center;
 }
 
-.TextosGrises {
+.frase {
     color: gray;
 }
 
@@ -58,7 +58,7 @@ p {
 
 }
 
-.seccionInput, .seccionResultados {
+.seccionInput, .seccionResultados, .secundario {
     border-radius: 32px;
     height: 810px;
     padding: 20px;
@@ -138,25 +138,25 @@ p {
     border-radius: 24px;
 }
 
-.botonEncriptar {
+.encriptar {
     background-color: var(--color-darkblue);
     color: var(--color-lightblue);
     border: solid 1px var(--color-lightblue);
     margin-right: 12px;
     font-size: 20px;
     font-weight: bold;
-} .botonEncriptar:hover {
+} .encriptar:hover {
     background-color: var(--color-darkblueHover);
 }
 
-.botonDesencriptar {
+.desencriptar {
     background-color: var(--color-lightblue);
     color: var(--color-darkblue);
     border: solid 1px var(--color-darkblue);
     margin-left: 12px;
     font-size: 20px;
     font-weight: bold;
-} .botonDesencriptar:hover {
+} .desencriptar:hover {
     background-color: var(--color-lightblueHover);
 }
 
@@ -168,15 +168,46 @@ p {
 
 /* SECCION RESULTADOS */
 
+/*
 .seccionResultados {
     width: 400px;
-    /* width: 25vw; */
     background-color: var(--color-resultados);
     margin: 40px 40px 0px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+};
+*/
+
+.secundario {
+    width: 400px;
+    background-color: var(--color-resultados);
+    margin: 40px 40px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+};
+
+
+
+.texto-encriptado{
+    border-radius: 10px;
+    border: none;
+    background-color: none;
+    /* position: absolute; */
+    width: auto;
+    height: auto;
+    /* left: 800px; */
+    /* top: 70px; */
+    text-align: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    /* line-height: 100%; */
+    resize: none;
 }
 
 .imagenTextos {
@@ -187,15 +218,31 @@ p {
     height: 100%;
 }
 
-.botonCopiar {
+/* .copiar {
     margin-top: auto;
     height: 67px;
     margin-top: auto;
     display: flex;
     justify-content: space-between;
+} */
+
+
+.copiar {
+    background-color: var(--color-darkblue);
+    color: var(--color-lightblue);
+    border: solid 1px var(--color-lightblue);
+    border-radius: 24px;
+    margin-right: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    width: auto;
+    height: auto;
+    display: flex;
+} .encriptar:hover {
+    background-color: var(--color-darkblueHover);
 }
 
-.botonCopiar button {
+.copiar button {
     /* display: inline-block; */
     margin-right: 10px;
     width: 164px;

@@ -7,50 +7,61 @@
     <link rel="stylesheet" href="/CSS/style.css">
 </head>
 <body>
-    <!-- <header>
-        <h1>aqui va el header en caso de que vaya</h1>
-    </header> -->
-
     <main>
         <img class="logoA" src="/img/Logo-1.png" alt="logoA">
         <div class="container">
             <div class="seccionInput">
-
-                    <textarea 
-                        name="texto" 
-                        id="textoEncriptar" 
-                        cols="30" 
-                        rows="10"
-                        placeholder="Ingrese el texto aqui"></textarea>
-                    <p class="TextosGrises">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
-                        <path fill="currentColor" d="M2.93 17.07A10 10 0 1 1 17.07 2.93A10 10 0 0 1 2.93 17.07m12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32M9 5h2v6H9zm0 8h2v2H9z"/>
-                        </svg> 
-                        Solo letras minúsculas y sin acentos
-                    </p>
+                <textarea 
+                    name="texto" 
+                    class="texto-nuevo"
+                    id="texto-nuevo" 
+                    cols="30" 
+                    rows="10"
+                    placeholder="Escribe tu texto aqui...!!"></textarea>
+                <p class="TextosGrises">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
+                    <path fill="currentColor" d="M2.93 17.07A10 10 0 1 1 17.07 2.93A10 10 0 0 1 2.93 17.07m12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32M9 5h2v6H9zm0 8h2v2H9z"/>
+                    </svg> 
+                    Solo letras minúsculas y sin acentos
+                </p>
                 <div class="botones">
-                    <button class="botonEncriptar">Encriptar</button>
-                    <button class="botonDesencriptar">Desencriptar</button>
+                    <button 
+                        id="encripta" 
+                        class="encriptar" 
+                        onclick="botonEncriptar(), mostrarcopiar(), mostrarExitoEncriptar(), ocultar()" disabled>
+                            Encriptar</button>
+                    <button 
+                        id="desencriptar" 
+                        class="desencriptar" 
+                        onclick="botonDesncriptar(), mostrarcopiar(), mostrarExitoDesencriptar(), ocultar()" disabled>
+                            Desencriptar</button>
                 </div>
             </div>
 
-            <div class="seccionResultados">
-                <div class="imagenTextos">
-                    <img src="/img/Muñeco.png" alt="Muñeco">
-                    <p class="TextosGrises" id="textoNegrito">Ningún mensaje fue encontrado</p>
-                    <p class="TextosGrises">Ingresa el texto que desees encriptar o desencriptar</p>
-                </div>
+            <div class="secundario">
+                <textarea id="texto-encriptado" class="texto-encriptado" disabled></textarea>
+                <img src="/img/Muñeco.png" alt="Muñeco" id="muñeco" class="muneco">
+            
+            <div class="secundario-dos">
+                <p id="frase" class="frase">Ningún mensaje fue encontrado</p>
+                <p id="mensaje" class="mensaje">Escribe el texto que deseas Encriptar o Desencriptar</p>
+            </div>
 
-                <div class="botonCopiar">
-                    <button hidden class="elBoton" >Copiar</button>
-                </div>
+            <p id="exito-enc" class="exito-encriptar">¡Tu mensaje fue encriptado con éxito!</p>
+            <p id="exito-des" class="exito-desencriptar">¡Tu mensaje a sido desencriptado!</p>
+            <button 
+                id="copiar" 
+                class="copiar" 
+                onclick="botonCopiar(), ocultarboton(), mostrar(), ocultarTexto(), desabilitarBotones()">
+                    Copiar</button>
+
+
             </div>
         </div>
     </main>
-
-    <!-- <footer>
-        <h2>aqui va el footer si es que va</h2>
-    </footer> -->
-
+    <script src="/JavaScript/encriptador.js"></script>
 </body>
 </html>
+
+
+<!-- https://github.com/crisjar89/Encriptador-alura/blob/main/style.css -->
