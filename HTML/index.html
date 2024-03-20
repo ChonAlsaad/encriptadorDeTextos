@@ -28,7 +28,7 @@
                     <button 
                         id="encripta" 
                         class="encriptar" 
-                        onclick="botonEncriptar(), mostrarcopiar(), mostrarExitoEncriptar(), ocultar()" disabled>
+                        onclick="botonEncriptar(), mostrarcopiar(), mostrarExitoEncriptar(), mostrarTextArea(), ocultar()" disabled>
                             Encriptar</button>
                     <button 
                         id="desencriptar" 
@@ -39,7 +39,7 @@
             </div>
 
             <div class="secundario">
-                <textarea id="texto-encriptado" class="texto-encriptado" disabled></textarea>
+                <textarea id="texto-encriptado" class="texto-encriptado" disabled hidden></textarea>
                 <img src="/img/Muñeco.png" alt="Muñeco" id="muñeco" class="muneco">
             
             <div class="secundario-dos">
@@ -47,9 +47,10 @@
                 <p id="mensaje" class="mensaje">Escribe el texto que deseas Encriptar o Desencriptar</p>
             </div>
 
-            <p id="exito-enc" class="exito-encriptar">¡Tu mensaje fue encriptado con éxito!</p>
-            <p id="exito-des" class="exito-desencriptar">¡Tu mensaje a sido desencriptado!</p>
+            <p id="exito-enc" class="exito-encriptar" hidden>¡Tu mensaje fue encriptado con éxito!</p>
+            <p id="exito-des" class="exito-desencriptar" hidden>¡Tu mensaje a sido desencriptado!</p>
             <button 
+                hidden
                 id="copiar" 
                 class="copiar" 
                 onclick="botonCopiar(), ocultarboton(), mostrar(), ocultarTexto(), desabilitarBotones()">
