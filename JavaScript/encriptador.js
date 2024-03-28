@@ -1,11 +1,11 @@
 
 
-const texto_nuevo = document.querySelector ("#texto-nuevo");
+const textoUsuario = document.querySelector ("#texto-usuario");
 const texto_encriptado = document.querySelector ("#texto-encriptado");
 const botonEncripta = document.getElementById("encripta");
 const botonDesencripta = document.getElementById("desencriptar");
 
-const matriz_code =[
+const matrizLlaveEncriptar =[
     ["e", "enter"], // indice 0
     ["i", "imes"],  // indice 1
     ["a", "ai"],  // indice 2
@@ -14,17 +14,17 @@ const matriz_code =[
 ];
 
 function botonEncriptar() {
-    const texto = encriptar(texto_nuevo.value);
+    const texto = encriptar(textoUsuario.value);
     texto_encriptado.value = texto;
-    texto_nuevo.value = "";
+    textoUsuario.value = "";
 };
 
 function encriptar(textoEncriptado){
-    for(let i = 0; i < matriz_code.length; i++) {
-        if(textoEncriptado.includes(matriz_code[i][0])){
+    for(let i = 0; i < matrizLlaveEncriptar.length; i++) {
+        if(textoEncriptado.includes(matrizLlaveEncriptar[i][0])){
             textoEncriptado = textoEncriptado.replaceAll(
-                matriz_code[i][0],
-                matriz_code[i][1]
+                matrizLlaveEncriptar[i][0],
+                matrizLlaveEncriptar[i][1]
             );
         }
     }
@@ -34,12 +34,12 @@ function encriptar(textoEncriptado){
 
 /*
 function encriptar(stringEncriptado) {
-    let matriz_code = [ ["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufato"] ];
+    let matrizLlaveEncriptar = [ ["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufato"] ];
     stringEncriptado = stringEncriptado.toLowerCase()
 
-    for (let i = 0; i < matriz_code.length; i++) {
-        if (stringEncriptado.includes(matriz_code[i][0])) {
-            stringEncriptado = stringEncriptado.replaceAll(matriz_code[i][0], matriz_code[i][1])
+    for (let i = 0; i < matrizLlaveEncriptar.length; i++) {
+        if (stringEncriptado.includes(matrizLlaveEncriptar[i][0])) {
+            stringEncriptado = stringEncriptado.replaceAll(matrizLlaveEncriptar[i][0], matrizLlaveEncriptar[i][1])
         }
     }
     return stringEncriptado;
@@ -47,7 +47,9 @@ function encriptar(stringEncriptado) {
 
 */
 
-const matriz_dos =[
+
+
+const matrizLlaveDesencriptar =[
     ["ai", "a"],
     ["enter", "e"],
     ["imes", "i"],
@@ -56,17 +58,17 @@ const matriz_dos =[
 ];
 
 function botonDesncriptar() {
-    const textodos = desencriptar(texto_nuevo.value);
+    const textodos = desencriptar(textoUsuario.value);
     texto_encriptado.value = textodos;
-    texto_nuevo.value = "";
+    textoUsuario.value = "";
 };
 
 function desencriptar(textoDesencriptado){
-    for(let i = 0; i < matriz_dos.length; i++) {
-        if(textoDesencriptado.includes(matriz_dos[i][0])){
+    for(let i = 0; i < matrizLlaveDesencriptar.length; i++) {
+        if(textoDesencriptado.includes(matrizLlaveDesencriptar[i][0])){
             textoDesencriptado = textoDesencriptado.replaceAll(
-                matriz_dos[i][0],
-                matriz_dos[i][1]
+                matrizLlaveDesencriptar[i][0],
+                matrizLlaveDesencriptar[i][1]
             );
         }
     }
@@ -141,8 +143,8 @@ function mostrarExitoEncriptar() {
 
 
 
-texto_nuevo.addEventListener("input", function(event) {
-    if (texto_nuevo.value.trim() !== "") {
+textoUsuario.addEventListener("input", function(event) {
+    if (textoUsuario.value.trim() !== "") {
         botonEncripta.removeAttribute("disabled");
         botonDesencripta.removeAttribute("disabled");
     }
